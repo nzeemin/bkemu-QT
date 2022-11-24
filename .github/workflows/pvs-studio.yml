@@ -34,7 +34,6 @@ jobs:
       continue-on-error: true
     - name: Convert
       run: |
-        mkdir Results
         plog-converter -t fullhtml -o ./Results/ ./PVS-Studio.log
     - name: Upload the report
       uses: actions/upload-artifact@v3
